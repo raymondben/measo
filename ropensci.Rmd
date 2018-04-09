@@ -1,0 +1,70 @@
+---
+title: "R for Antarctic and Southern Ocean science"
+author: "Ben Raymond, Michael Sumner"
+date: ""
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    seal: false
+    self_contained: false
+    css: ["extra/extra.css"]
+    chakra: libs/remark-latest.min.js
+    nature:
+      highlightStyle: github
+      highlightLines: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+options(knitr.kable.NA="")
+knitr::opts_chunk$set(fig.path="extra/",echo=FALSE,warning=FALSE,message=FALSE,cache=TRUE)
+```
+
+class: inverse, middle
+
+# R for Antarctic and Southern Ocean Science
+
+Ben Raymond, Michael Sumner
+
+---
+background-image: url(extra/scar_logo_sm.jpg)
+background-size: auto 15%
+background-position: 98% 98%
+
+# rOpenSci <img style="background-color: white; padding:10px; float:right;clear:none; margin:20px;" width="30%" src="extra/ropensci_logo.png" alt="ropensci logo" />
+
+rOpenSci: R for reproducible science, open data & software
+
+https://ropensci.org/community/
+
+Tutorials, use cases, discussion forum, open calls, physical meetings
+
+For R developers/regular users:
+
+- slack: http://slack.ropensci.org/
+- package onboarding
+
+SCAR/rOpenSci joint initiative
+
+
+---
+background-image: url(extra/scar_logo_sm.jpg)
+background-size: auto 15%
+background-position: 98% 98%
+
+# Antarctic/SO R packages
+
+See https://github.com/SCAR/antarctic-r-packages
+
+- taxonomy
+- mapping
+- environmental data access
+- ocean colour processing
+- biodiversity data
+- animal tracking
+
+What packages do we need? What tasks/analyses should be easier than they currently are?
+
+---
+
+# Bowerbird/raadtools
