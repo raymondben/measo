@@ -24,11 +24,13 @@ class: inverse, middle
 
 # R for Antarctic and Southern Ocean Science
 
+<img style="background-color: white; padding:10px; float:right;clear:none; margin:20px;" width="20%" src="extra/qr-measo.png" alt="qrcode" />
+
 Ben Raymond, Michael Sumner
 
 ---
-background-image: url(extra/scar_logo_sm.jpg)
-background-size: auto 15%
+background-image: url(extra/logos_footer.png)
+background-size: auto 10%
 background-position: 98% 98%
 
 # rOpenSci <img style="background-color: white; padding:10px; float:right;clear:none; margin:20px;" width="30%" src="extra/ropensci_logo.png" alt="ropensci logo" />
@@ -48,8 +50,8 @@ SCAR/rOpenSci joint initiative
 
 
 ---
-background-image: url(extra/scar_logo_sm.jpg)
-background-size: auto 15%
+background-image: url(extra/logos_footer.png)
+background-size: auto 10%
 background-position: 98% 98%
 
 # Antarctic/SO R packages
@@ -60,11 +62,68 @@ See https://github.com/SCAR/antarctic-r-packages
 - mapping
 - environmental data access
 - ocean colour processing
-- biodiversity data
+- biodiversity, diet data
 - animal tracking
 
 What packages do we need? What tasks/analyses should be easier than they currently are?
 
 ---
+background-image: url(extra/logos_footer.png)
+background-size: auto 10%
+background-position: 98% 98%
 
-# Bowerbird/raadtools
+# <u>blueant</u>/raadtools
+
+https://github.com/AustralianAntarcticDivision/blueant
+
+- pre-configured definitions for environmental/satellite data sets
+- functions for maintaining local copies of those data
+
+```{r eval=FALSE, echo=TRUE}
+library(blueant)
+
+## define where we want to store our data
+my_data_dir <- "c:/my/big/data/collection"
+cf <- bb_config(local_file_root=my_data_dir)
+
+## add a few data sets to our configuration
+my_sources <- c("NSIDC SMMR-SSM/I Nasateam sea ice concentration",
+                "IBCSO bathymetry")
+
+cf <- cf %>% bb_add(sources(my_sources))
+
+## go!
+bb_sync(cf)
+```
+
+---
+background-image: url(extra/logos_footer.png)
+background-size: auto 10%
+background-position: 98% 98%
+
+# <u>blueant</u>/raadtools
+
+https://github.com/AustralianAntarcticDivision/blueant
+
+- central data collection for multiple researchers
+
+- scheduled task to keep it updated
+
+- together with `raadtools` and virtual machine capability provides a consistent, community-level framework
+
+---
+background-image: url(extra/logos_footer.png)
+background-size: auto 10%
+background-position: 98% 98%
+
+# blueant/<u>raadtools</u>
+
+- functions for reading and manipulating environmental data in a simple and consistent way
+
+https://github.com/AustralianAntarcticDivision/raadtools
+
+```{r eval=FALSE, echo=TRUE}
+library(raadtools)
+
+```
+
